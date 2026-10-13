@@ -45,15 +45,31 @@ packages=(
     "mc"
     "nano"
     "wget"
-    "p7zip"
+    "7zip"
     "htop"
     "onboard"
     "libreoffice"
     "vlc"
-    "evolution"
     "gparted"
     "atril"
     "sane-airscan"
+    "openvpn"
+    "NetworkManager-openvpn"
+    "NetworkManager-openvpn-gnome"
+    "nemo-mail-plugin"
+    "pdfjam"
+    "freerdp"
+    "exfat"
+    "man-db"
+    "gnome-screenshot"
+    "cifs-utils"
+    "keyutils"
+    "perl-JSON"
+    "numlockx"
+    "oddjob"
+    "oddjob-mkhomedir"
+    "sssd"
+    "adcli"
 )
 
 # Цвета
@@ -126,7 +142,7 @@ if [ "$count_installed" -eq 0 ]; then
     echo "  (нет)"
 else
     while IFS= read -r p; do
-        echo -e "  ${GREEN}✔${NC} $p"
+        echo -e "  ${GREEN}${NC} $p"
     done < "$tmp_installed"
 fi
 echo ""
@@ -139,7 +155,7 @@ if [ "$count_repo" -eq 0 ]; then
     echo "  (нет)"
 else
     while IFS= read -r p; do
-        echo -e "  ${YELLOW}⬇${NC} $p"
+        echo -e "  ${YELLOW}${NC} $p"
     done < "$tmp_repo"
 fi
 echo ""
@@ -152,7 +168,7 @@ if [ "$count_missing" -eq 0 ]; then
     echo "  (нет)"
 else
     while IFS= read -r p; do
-        echo -e "  ${RED}✘${NC} $p"
+        echo -e "  ${RED}${NC} $p"
     done < "$tmp_missing"
 fi
 echo ""
